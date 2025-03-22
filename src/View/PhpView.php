@@ -22,7 +22,7 @@ class PhpView implements View
      */
     public function make(string $name, array $data = [], int $httpStatus = 200, array $httpHeaders = [])
     {
-        $file = str_replace('.', DIRECTORY_SEPARATOR, $name) . '.phtml';
+        $file = str_replace('.', DIRECTORY_SEPARATOR, $name) . '.php';
         $path = join('/', [$this->directory, $file]);
 
         http_response_code($httpStatus);
